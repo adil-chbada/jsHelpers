@@ -1,0 +1,25 @@
+{
+  "name": "ma-jshelper",
+  "version": "1.1.0",
+  "description": "# jsHelpers", 
+   "main": "dist/index.js",
+ "types" : "dist/index.d.ts",
+ "scripts": {
+   "build": "tsc" ,  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adil-chbada/jsHelpers.git"
+  },
+  "author": "adil chbada <adil.chbada1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adil-chbada/jsHelpers/issues"
+  },
+  "homepage": "https://github.com/adil-chbada/jsHelpers#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.1.1"
+  }
+}

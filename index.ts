@@ -3,10 +3,10 @@ class $Array {
     }
 
     first = () => {
-        return this[0];
+        return this.array[0];
     };
     last = () => {
-        return this[this.array.length - 1];
+        return this.array[this.array.length - 1];
     };
     findElIndex = (elm: any) => {
         let index = -1;
@@ -16,7 +16,7 @@ class $Array {
         });
         return index;
     };
-    has = (elm) => {
+    has = (elm: any) => {
         return this.findElIndex(elm) > -1;
     };
 
@@ -30,27 +30,25 @@ class $Array {
         }
         return nbrDeleted;
     };
-    elementsNotIn = (array_filter) => {
+    elementsNotIn = (array_filter: Array<any>) => {
         let _this = this.clone();
         if (Array.isArray(array_filter))
             array_filter.forEach(e => {
-                _this.deleteObject(e)
+                (new $Array(_this)).delete(e)
             });
         return _this;
     };
-    clone = function () {
-        return this.slice(0);
+    clone = () => {
+        return this.array.slice(0);
     };
 
 }
 
 class $Object {
-    constructor(public object: Object = null) {
+    constructor(public object: Object) {
     }
-
     clone(obj: Object): Object {
-        // @ts-ignore
-        return Object.assign({}, obj);
+        return Object().assign({}, obj);
     }
 }
 
@@ -67,3 +65,4 @@ const jsHelper = {
 };
 
 export default jsHelper;
+
